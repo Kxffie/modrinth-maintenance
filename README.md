@@ -2,6 +2,8 @@
 
 This is a simple maintenance page for the Modrinth website. It is designed to be displayed when the site is undergoing maintenance. The page provides users with information about the maintenance and offers links to the Modrinth status page and social media accounts.
 
+Each file is separated, but there is an all.html file for when uploading to the Cloudflare worker so you can have a maintenance site when its down.
+
 ## Features
 
 - **Maintenance Message**: The page displays a prominent message informing users that the site is undergoing maintenance. It uses a visually appealing image and a card layout to present the message.
