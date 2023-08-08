@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>The Modrinth App</title>
+    <meta name="description" content="Download the Modrinth App for Windows, Mac, and Linux.">
+    <meta property="og:site_name" content="Modrinth">
+    <meta property="og:title" content="Modrinth">
+    <meta property="og:description" content="An open source modding platform. Mr. Rinth is doing an extra shift">
+    <meta property="og:image" content="https://cdn.modrinth.com/modrinth-new.png">
+    <meta name="theme-color" content="#1BD96A">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #16181C), url('https://cdn.glitch.global/6e46548a-2923-41f7-86e2-880d7da16f88/landing.png?v=1691459121393');
+            background-size: cover;
+            background-repeat: no-repeat;
+
+            background-color: #16181C;
+            color: #fff;
+            font-family: 'Roboto', sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+            margin: 0;
+            padding: 0;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            
+        }
+
+        .center {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            text-align: center;
+
+            background-color: #21242D;
+            border-radius: 20px;
+            padding: 2rem;
+        }
+
+        .card p {
+            font-size: 1.2rem;
+            margin-top: 0.4rem;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            margin-top: 1rem;
+        }
+
+        a {
+            color: #1BD96A;
+        }
+
+        .btn {
+            border: 1px solid #fff;
+            border-radius: 5px;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            color: #fff;
+            background-color: transparent;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .btn:hover {
+            background-color: #1BD96A;
+            border: 1px solid #1BD96A;
+            color: #000;
+        }
+
+        .mastadon:hover {
+            background-color: #5B4ADF;
+            border: 1px solid #5B4ADF;
+            color: #000;
+        }
+
+        .discord:hover {
+            background-color: #5865F2;
+            border: 1px solid #5865F2;
+            color: #000;
+        }
+
+        .birdapp:hover {
+            background-color: #000;
+            border: 1px solid #000;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="center">
+        <img src="/images/hello.png" width="250" />
+        <div class="card">
+            <h1>We're doing some maintenance</h1>
+            <p>Sorry for that, we'll be back online real soon.</p>
+            <p>Check our <a href="https://status.modrinth.com/" target="_blank">status page</a> for the updates.</p>
+            <br />
+            <div class="buttons">
+                <a href="https://floss.social/@modrinth" target="_blank">
+                    <button class="btn mastadon">
+                        Mastadon
+                    </button>
+                </a>
+                <a href="https://twitter.com/modrinth" target="_blank">
+                    <button class="btn birdapp">
+                        X
+                    </button>
+                </a>
+                <a href="https://floss.social/@modrinth" target="_blank">
+                    <button class="btn discord">
+                        Get in touch
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
