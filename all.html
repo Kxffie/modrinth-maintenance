@@ -42,6 +42,11 @@
             align-items: center;
             min-height: 100vh;
             
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+
+            overflow-x: hidden;
+
         }
 
         .center {
@@ -53,7 +58,6 @@
 
         .card {
             text-align: center;
-
             background-color: #21242D;
             border-radius: 20px;
             padding: 2rem;
@@ -84,6 +88,7 @@
             background-color: transparent;
             cursor: pointer;
             transition: all 0.3s ease-in-out;
+            width: 100px;
         }
 
         .btn:hover {
@@ -109,6 +114,33 @@
             border: 1px solid #000;
             color: #fff;
         }
+
+        @media (max-width: 600px) {
+            body {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        
+            img {
+                width: 60%;
+                margin-top: 20px;
+            }
+        
+            .card {
+                width: 90%;
+                font-size: 16px;
+            }
+        
+            .buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 300px;
+                margin-bottom: 10px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -130,9 +162,9 @@
                         X
                     </button>
                 </a>
-                <a href="https://floss.social/@modrinth" target="_blank">
+                <a href="https://discord.com/invite/EUHuJHt" target="_blank">
                     <button class="btn discord">
-                        Get in touch
+                        Discord
                     </button>
                 </a>
             </div>
