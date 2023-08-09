@@ -1,3 +1,46 @@
+:root {
+    --bg-url: url('https://cdn.glitch.global/6e46548a-2923-41f7-86e2-880d7da16f88/landing.png?v=1691530500510');
+
+    --black: #000;
+    --white: #fff;
+
+    --text: #fff;
+
+    --bg: #16181C;
+    --card-bg: #21242D;
+
+    --modrinth-green: #1BD96A;
+    --discord-brand: #5865F2;
+    --birdapp-brand: #000;
+    --threads-brand: #101010;
+    --mastodon-brand: #5B4ADF;
+    --bluesky-brand: #0085FF;
+}
+
+[data-theme="light"] {
+    --bg-url: url('https://cdn.glitch.global/6e46548a-2923-41f7-86e2-880d7da16f88/landing-light.png?v=1691543474189');
+
+    --text: #000;
+
+    --bg: #E5E7EB;
+    --card-bg: #FFFFFF;
+
+    --modrinth-green: #00AF5C;
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --bg-url: url('https://cdn.glitch.global/6e46548a-2923-41f7-86e2-880d7da16f88/landing-light.png?v=1691543474189');
+
+        --text: #000;
+
+        --bg: #E5E7EB;
+        --card-bg: #FFFFFF;
+
+        --modrinth-green: #00AF5C;
+    }
+}
+
 * {
     font-family: 'Inter', sans-serif;
     box-sizing: border-box;
@@ -7,12 +50,12 @@
 }
 
 body {
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #16181C), url('https://cdn.glitch.global/6e46548a-2923-41f7-86e2-880d7da16f88/landing.png?v=1691530500510');
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), var(--bg)), var(--bg-url);
     background-size: cover;
     background-repeat: no-repeat;
 
-    background-color: #16181C;
-    color: #fff;
+    background-color: var(--gray);
+    color: var(--text);
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     line-height: 1.5;
@@ -32,15 +75,18 @@ body {
 }
 
 .center {
+    /* true center */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    margin: 0 auto;
 }
 
 .card {
     text-align: center;
-    background-color: #21242D;
+    background-color: var(--card-bg);
     border-radius: 20px;
     padding: 2rem;
     max-width: 37.5rem;
@@ -53,16 +99,36 @@ body {
 }
 
 p a {
-    color: #1BD96A;
+    color: var(--modrinth-green);
     text-decoration: underline;
 }
 
-img {
+.title {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+img#modrinth-bot {
     display: block;
     max-width: 250px;
     max-height: 250px;
     width: auto;
     height: auto;
+}
+
+img#logo {
+    display: block;
+    max-width: 30px;
+    max-height: 30px;
+    width: auto;
+    height: auto;
+    margin-right: 0.4rem;
 }
 
 .buttons {
@@ -76,13 +142,13 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid #1BD96A;
+    border: 1px solid var(--modrinth-green);
     border-radius: 50%;
     width: 50px;
     height: 50px;
     padding: 0.5rem 1rem;
     font-size: 1rem;
-    color: #1BD96A;
+    color: var(--modrinth-green);
     background-color: transparent;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
@@ -90,33 +156,39 @@ img {
 }
 
 .btn:hover {
-    background-color: #1BD96A;
-    border: 1px solid #1BD96A;
+    background-color: var(--modrinth-green);
+    border: 1px solid var(--modrinth-green);
     color: #fff;
 }
 
 .mastodon:hover {
-    background-color: #5B4ADF;
-    border: 1px solid #5B4ADF;
+    background-color: var(--mastodon-brand);
+    border: 1px solid var(--mastodon-brand);
     color: #fff;
 }
 
 .discord:hover {
-    background-color: #5865F2;
-    border: 1px solid #5865F2;
+    background-color: var(--discord-brand);
+    border: 1px solid var(--discord-brand);
     color: #fff;
 }
 
 .birdapp:hover {
-    background-color: #000;
-    border: 1px solid #000;
+    background-color: var(--birdapp-brand);
+    border: 1px solid var(--birdapp-brand);
     color: #fff;
 }
 
-.bluesky:hover {
-    background-color: #000;
-    border: 1px solid #000;
-    color: #0085FF;
+.threads:hover {
+    background-color: var(--threads-brand);
+    border: 1px solid var(--threads-brand);
+    color: #fff;
+}
+
+.bluesky:hover { 
+    background-color: var(--black);
+    border: 1px solid var(--black);
+    color: var(--bluesky-brand);
 }
 
 @media (max-width: 600px) {
@@ -125,24 +197,14 @@ img {
         flex-direction: column;
         align-items: center;
     }
-  
+
     img {
         margin-top: 20px;
     }
-  
+
     .card {
         width: 90%;
         font-size: 16px;
         min-width: 0;
     }
-  
-    /* .buttons {
-        flex-direction: column;
-    }
-
-    .btn {
-        width: 300px;
-        margin-bottom: 10px;
-        border-radius: 25px;
-    } */
 }

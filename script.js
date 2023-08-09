@@ -21,14 +21,19 @@ var easterEggTexts = [
     'Whoops, we\'re all out of fabric',
     'The bandits are coming!',
     'The British are coming!',
+    'We must save my family!',
     'Should\'ve used NextJS',
-    'Modrinth got lost in Labrinth'
+    'Modrinth got lost in Labrinth',
+    'This isn\'t modrinth discussion',
+    'Missing some redstone dust',
+    'The cake is a lie',
+    'thesuzerain did it'
 ]
 
 function changeHeading() {
     const heading = document.querySelector('h1');
     const randomNumber = Math.random();
-  
+
     if (randomNumber < 0.9) {
         heading.textContent = "We're doing some maintenance";
     } else {
@@ -48,6 +53,6 @@ function changeBirdApp() {
         birdApp.innerHTML = `<i class="fa-brands fa-twitter"></i>`;
     }
 }
-  
+
 window.addEventListener('load', changeHeading);
 window.addEventListener('load', changeBirdApp);
